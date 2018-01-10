@@ -15,6 +15,9 @@
 /config/database.yml
 /config/secrets.yml
 
+# Ignore public assets folder with precompiled assets
+/public/assets/*
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
