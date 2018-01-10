@@ -1,4 +1,10 @@
 module ProductsHelper
+  def creds
+    return {
+      "x-user-email"  => "support@zincplatform.com",
+      "x-user-token" => "CxQCfo9myqPfx6s9PVxe"
+    }
+  end
   def getApiJson(product)
     return {
       "sku": {
@@ -28,9 +34,18 @@ module ProductsHelper
     }
     # TODO: Make this Async and non-blocking
     return HTTParty.post(
-      "https://private-9212f-zincplatform.apiary-mock.com/api/price_quotes",
+      "https://sandbox.zincplatform.com/api/price_quotes",
       :headers => headers,
       :body => requestBody
+    )
+  end
+
+  def callForInterstitial()
+    headers = self.creds
+    # TODO: Make this Async and non-blocking
+    return HTTParty.get(
+      "https://sandbox.zincplatform.com/api/interstitials/Musical",
+      :headers => self.creds
     )
   end
 
