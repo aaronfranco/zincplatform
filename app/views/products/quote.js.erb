@@ -1,2 +1,13 @@
 
 $("#api-handler").html("<%= escape_javascript(render 'quote', data: @data) %>")
+var insured = false;
+$("#quoteFormCheck").change(function(e){
+  insured =  !insured;
+  console.log(insured)
+})
+$("#cart-button").bind('click', function(e){
+  console.log(insured)
+  if(!insured){
+    $("#policyModal").modal('show')
+  }
+})
