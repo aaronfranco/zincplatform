@@ -1,0 +1,2 @@
+Product.delete_all
+Product.create! id: 1, name: "Gibson Custom Shop Golden Era Les Paul Standard Electric Guitar (with Case), Washed Cherry (VOS)", price: 5299.00, description:"The 2017 Gibson Custom Shop Golden Era Les Paul has it all! It’s vintage construction and premium wood selection makes this instrument look, feel and sound like a true vintage instrument. With its accurate PAF voiced humbuckers, this guitar delivers! The new Golden Era Les Paul is an absolutely stunning recreation of the most sought-after guitar ever made."
