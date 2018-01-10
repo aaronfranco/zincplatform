@@ -17,6 +17,7 @@
 
 # Ignore public assets folder with precompiled assets
 /public/assets/*
+/public/assets/.*.json
 
 # Ignore all logfiles and tempfiles.
 /log/*
