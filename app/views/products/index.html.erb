@@ -1,2 +1,33 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<div class="container">
+  <% @products.each do |product| %>
+      <div class="product-card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <img class="card-img-top" src="https://cdn.shopify.com/s/files/1/0977/3554/products/phoenix-17001-1_2048x@2x.jpg?v=1497368048" alt="Card image cap">
+            </div>
+            <div class="col-12 col-sm-6">
+              <h1 class="product-name"><%= product.name %></h1>
+              <div class="row">
+                  <div class="col-12 col-sm-6">
+                    <h2 class="product-price d-flex justify-content-center"><%= number_to_currency product.price %></h2>
+                    <small class="d-flex justify-content-center"><em>*Money Back Guarantee</em></small>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <button type="submit" class="btn btn-warning btn-sm btn-block float-right">Add To Cart</button>
+                    <button type="submit" class="btn btn-primary btn-sm btn-block float-right"><i class="fa fa-paypal"></i> Buy Now</button>
+                  </div>
+              </div>
+              <div class="product-detail">
+                <h5 class="card-title mt-3 w-100 pb-1">Insurance</h5>
+              </div>
+              <div class="product-detail">
+                <h5 class="card-title mt-3 w-100 pb-1">Description</h5>
+                <p class="card-text"><%= product.description %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <% end %>
+</div>
