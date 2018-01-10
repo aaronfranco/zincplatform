@@ -1,0 +1,14 @@
+<% if @data %>
+  <form class="form-inline">
+    <div class="form-check mt-1 mr-sm-3">
+      <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+      <label class="form-check-label" for="inlineFormCheck">
+        <%= number_to_currency  @data.price_quotes[0].price_per_year %> per year
+      </label>
+    </div>
+    <small class="mt-sm-1">Insure against loss, theft and damage with Zinc. <i id="show-insurance-pop" class="fa fa-info-circle" data-toggle="modal" data-target="#policyModal"></i></small>
+  </form>
+<%else%>
+  <img height="25" src="https://www.shopthemarketplace.com/images/spinner.gif"/>&nbsp;&nbsp;
+  <small><em>Loading Insurance Pricing...</em></small>
+<%end%>

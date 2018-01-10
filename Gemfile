@@ -36,7 +36,8 @@ gem 'react-rails'
 gem 'minitest'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0.beta3'
-
+gem 'httparty'
+gem 'hashie'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -48,6 +49,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rails-controller-testing'
   gem 'vcr'
+  gem 'webmock'
   gem 'rubycritic'
 end
 

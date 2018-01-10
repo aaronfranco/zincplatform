@@ -20,6 +20,9 @@
               </div>
               <div class="product-detail">
                 <h5 class="card-title mt-3 w-100 pb-1">Insurance</h5>
+                <div id="api-handler" class="d-flex justify-content-center">
+                  <%= render('quote') %>
+                </div>
               </div>
               <div class="product-detail">
                 <h5 class="card-title mt-3 w-100 pb-1">Description</h5>
@@ -29,5 +32,18 @@
           </div>
         </div>
       </div>
+      <%= render("insurance_modal") %>
+      <script>
+      $( document ).ready(function() {
+          // call the controller function here
+          $.ajax ({
+                  url: '/quote',
+                  method: 'GET',
+                  data: {id: <%= product.id %>}
+              }).done (function (server_response) {
+                // do nothing here
+              });
+      });
+      </script>
   <% end %>
 </div>

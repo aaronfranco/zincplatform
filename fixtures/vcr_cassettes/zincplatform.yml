@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://private-9212f-zincplatform.apiary-mock.com/api/price_quotes
+    body:
+      encoding: UTF-8
+      string: sku[sku_name]=MyString&sku[category]=Musical&sku[subcategory]=Guitar&sku[description]=MyText&sku[price]=9.99&sku[currency]=USD&sku[brand]=GoodProduct&sku[variant_id]=328&sku[remote_image_url]=path%2Fto%2Fsku_image.jpg&sku[additional_info][vendor]=Gold&zip_code=10027&additional_params[source]=CART
+    headers:
+      X-User-Email:
+      - support@zincplatform.com
+      X-User-Token:
+      - CxQCfo9myqPfx6s9PVxe
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Apiary-Ratelimit-Limit:
+      - '120'
+      X-Apiary-Ratelimit-Remaining:
+      - '119'
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT
+      Access-Control-Max-Age:
+      - '10'
+      X-Apiary-Transaction-Id:
+      - 5a567470743cbd0700def84f
+      Content-Length:
+      - '360'
+      Date:
+      - Wed, 10 Jan 2018 20:15:44 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "price_quotes": [
+            {
+              "id": 49283,
+              "sku_id": 10017,
+              "price_per_year": 19.8,
+              "currency": "USD",
+              "provider": "JM",
+              "quote_type": "Insurance",
+              "deductible": 50,
+              "description": "Protect your purchase with plan from AA",
+              "price": 19.8,
+              "variant_id": 328,
+              "insurable_item_id": 10017
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Wed, 10 Jan 2018 20:15:44 GMT
+recorded_with: VCR 4.0.0

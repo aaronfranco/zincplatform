@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class ProductsControllerTest < ActionDispatch::IntegrationTest
+
   test "should get index" do
     get "/"
     assert_response :success
@@ -18,4 +19,5 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     # TODO: We should also test the currency type if/when we have to localize the app
     assert_select "h2.product-price", "$9.99"
   end
+
 end
