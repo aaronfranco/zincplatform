@@ -20,3 +20,9 @@ testing the zincplatform API in a Rails 5 project
 My plan is to create a basic website hosting a single product. The site will cover all core requirements of the challenge with a focus on the core best practices approach as well as all functionality. Once this is completed using TDD, further iterations will be create to add more features to the application and improve styling.
 
 * working on the API section of the functionality, I plan to start by implementing the REST requests in the controller and rendered to a partial in the main product view. Once this is completed, I can refactor into a GEM if time allows.
+
+### Iteration One Wrap up
+I finished what appears to be all of the core requirements. There is some things I would like to refactor, and I believe further testing would be good as well. I would also like to implement a Media Model to keep track of the media for the products, however I don't think time will allow. I have added TODO comment where I saw the opportunities to refactor.
+
+## Iteration two
+My plan is to implement the popup for the insurance policy, and then add some better styles. Possibly refactor some code if time allows.
