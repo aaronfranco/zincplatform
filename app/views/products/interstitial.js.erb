@@ -1,0 +1,13 @@
+
+if(document.createStyleSheet) {
+  document.createStyleSheet('<%= @data.stylesheet %>');
+  $("#modalBody").html("<%= escape_javascript(render 'modal_body', data: @data) %>")
+}
+else {
+  var styles = "@import url('<%= @data.stylesheet %>');";
+  var newSS=document.createElement('link');
+  newSS.rel='stylesheet';
+  newSS.href='data:text/css,'+escape(styles);
+  document.getElementsByTagName("head")[0].appendChild(newSS);
+  $("#modalBody").html("<%= escape_javascript(render 'modal_body', data: @data) %>")
+}

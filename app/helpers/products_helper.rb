@@ -40,7 +40,7 @@ module ProductsHelper
     )
   end
 
-  def callForInterstitial()
+  def callForInterstitial
     headers = self.creds
     # TODO: Make this Async and non-blocking
     return HTTParty.get(

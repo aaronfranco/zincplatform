@@ -13,6 +13,6 @@ class ProductsController < ApplicationController
     @data = Hashie::Mash::new response
   end
   def interstitial
-
+    @data = Hashie::Mash::new helpers.callForInterstitial()
   end
 end
