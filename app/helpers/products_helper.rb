@@ -1,8 +1,9 @@
 module ProductsHelper
+  # TODO: not secure, remove these to a config file
   def creds
     return {
-      "x-user-email"  => "support@zincplatform.com",
-      "x-user-token" => "CxQCfo9myqPfx6s9PVxe"
+      "x-user-email"  => "XXX",
+      "x-user-token" => "XXX"
     }
   end
   def getApiJson(product)
