@@ -15,3 +15,6 @@ testing the zincplatform API in a Rails 5 project
 * Fast load times to improve conversions
 * Responsive design for mobile consumers
 * Video instead of images to improve conversions
+
+## Iteration One
+My plan is to create a basic website hosting a single product. The site will cover all core requirements of the challenge with a focus on the core best practices approach as well as all functionality. Once this is completed using TDD, further iterations will be create to add more features to the application and improve styling.
