@@ -8,6 +8,7 @@ $("#quoteFormCheck").change(function(e){
 $("#cart-button").bind('click', function(e){
   console.log(insured)
   if(!insured){
+    console.log("open modal")
     $("#policyModal").modal('show')
   }
 })

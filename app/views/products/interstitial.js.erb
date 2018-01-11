@@ -1,4 +1,4 @@
-
+console.log("<%= @data %>")
 if(document.createStyleSheet) {
   document.createStyleSheet('<%= @data.stylesheet %>');
   $("#modalBody").html("<%= escape_javascript(render 'modal_body', data: @data) %>")

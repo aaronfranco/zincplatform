@@ -1,12 +1,6 @@
 module ProductsHelper
-  # TODO: not secure, remove these to a config file
-  def creds
-    return {
-      "x-user-email"  => "XXX",
-      "x-user-token" => "XXX"
-    }
-  end
   def getApiJson(product)
+    # TODO: Work on product features to create a more automated conversion to JSON so this isn't hard coded
     return {
       "sku": {
         "sku_name": product.name,
@@ -29,14 +23,13 @@ module ProductsHelper
     }
   end
   def callForQuote(requestBody)
-    headers = {
-      "x-user-email"  => "support@zincplatform.com",
-      "x-user-token" => "CxQCfo9myqPfx6s9PVxe"
-    }
     # TODO: Make this Async and non-blocking
     return HTTParty.post(
       "https://sandbox.zincplatform.com/api/price_quotes",
-      :headers => headers,
+      :headers => {
+        "x-user-email"  => "xxx",
+        "x-user-token" => "xxx"
+      },
       :body => requestBody
     )
   end
@@ -44,9 +37,13 @@ module ProductsHelper
   def callForInterstitial
     headers = self.creds
     # TODO: Make this Async and non-blocking
+    # TODO: Move URLs and Tokens to environment files
     return HTTParty.get(
       "https://sandbox.zincplatform.com/api/interstitials/Musical",
-      :headers => self.creds
+      :headers => {
+        "x-user-email"  => "xxx",
+        "x-user-token" => "xxx"
+      }
     )
   end
 
