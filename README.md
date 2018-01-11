@@ -28,11 +28,13 @@ I finished what appears to be all of the core requirements. There is some things
 My plan is to implement the popup for the insurance policy, and then add some better styles. Possibly refactor some code if time allows.
 
 # Install
-1 bundle Install
-2 rake db:migrate
-3 rake db:seed
-4 Update the API tokens in the Product Helper
+```
+> bundle Install
+> rake db:migrate
+> rake db:seed
+> Update the API tokens in the Product Helper
 > rails server
+```
 
 # TODO
 I realize that storing the API Header credentials in a GIT repo is insecure, those would be stored in environment variables on an production server. This was an oversight due to time constraints and due to the pressure.
